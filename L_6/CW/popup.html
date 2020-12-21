@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+			display: block;
+			width: 100px;
+			height: 40px;
+			border: 1px solid #000;
+			background: yellow;
+			cursor: pointer;
+		}
+
+		#popup{
+			display: none;
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			position: absolute;
+			top: 200px;
+			left: calc(50% - 150px);
+			background: #fff;
+		}
+
+        #popup.show {
+            display: block;
+        }
+        
+		#close{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			cursor: pointer;
+		}
+
+        .greyBg {
+            background-color: rgba(0,0,0,0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <a id="button">Show Popup</a>
+	<div id="popup">
+		<p>Some text goes here</p>
+		<span id="close">x</span>
+	</div>
+    <script>
+        var btnShopPopup = document.getElementById('button');
+        var popup = document.getElementById('popup');
+        var closePopup = document.getElementById('close');
+
+        btnShopPopup.addEventListener('click', function() {
+            // document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
+            // popup.style.display = 'block';
+
+            document.body.classList.add('greyBg');
+            popup.classList.add('show');
+        });
+
+        closePopup.addEventListener('click', function() {
+            // document.body.style.backgroundColor = '';
+            // popup.style.display = 'none';
+
+            document.body.classList.remove('greyBg');
+            popup.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
