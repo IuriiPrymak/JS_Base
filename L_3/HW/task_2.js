@@ -1,22 +1,10 @@
 /* 
-   2. Создать функцию, возводящую число в степень, число и сама степень вводится пользователем
+2. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
 */
 
-function pow(x, n) {
-    var result = x;
+var array=['Element 1','Element 2','Element 3','Element 4'];
+var element;
 
-    for (var i = 1; i < n; i++) {
-        result *= x;
-    }
-
-    return result;
-}
-
-var x = prompt("Введите число", '');
-var n = prompt("Введите степень", '');
-
-if (n < 1) {
-    document.write(`Степень ${n} не поддерживается`);
-} else {
-    document.write('Результат: ', pow(x, n));
-}
+element = prompt('Введите номер элемента, после которого Вы хотите вставить новый элемент. \nЕсть следующие элементы массива:\n' + array.join('\n') );
+array.splice(element, 0, 'NewArrayElement');
+console.log(array);

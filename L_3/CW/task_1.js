@@ -1,15 +1,15 @@
 /* 
-    1. Напишите функцию, которая принимает массив в качестве аргумента. Используя slice (), извлеките информацию из массива 
-    аргументов и верните новый массив, содержащий элементы «warm» и «sunny».
+1. Создайте переменную с именем myData и установите ее равной первому значению массива, используя скобочные обозначения
+и выведите значение в консоль.
 
-    ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']
+		// Example
+		var ourArray = [50,60,70];
+		var ourData = ourArray[0]; // equals 50
+
+		// Setup
+		var myArray = [50,60,70];
 */
 
-function getItems(arr) {
-    return arr.slice(2, 4);
-}
-
-var arr = ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms'];
-
-var res = getItems(arr);
-console.log(res);
+let myArray = [1, 2, 3]
+myData = myArray[0];
+console.log(myData);

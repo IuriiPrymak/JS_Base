@@ -1,30 +1,12 @@
-/*
-    3. Напишите функцию которая бы переворачивала предоставленную строку
-    Возможно, вам придется превратить строку в массив, прежде чем вы можете обратить его.
-    Ваш результат должен быть строкой.
-    "something"
+/* 
+3. Используя скобочные обозначения, выберите элемент из myArray так, чтобы myData был равен 8 и выведите в консоль.
+		
+		// Setup
+		var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+
+		var myData;
 */
 
-var string = 'something';
-
-// 1. ---
-
-// function reverseString(str) {
-//     var arrFromStr = str.split('');
-//     var reversedArr = arrFromStr.reverse();
-//     var reversedStr = reversedArr.join('');
-//     return reversedStr;
-// }
-
-// 2. ---
-
-// function reverseString(str) {
-//     return str.split('').reverse().join('');
-// }
-
-// 3. ---
-
-const reverseString = (str) => str.split('').reverse().join('');
-
-var result = reverseString(string);
-console.log(result);
+var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]];
+var myData = myArray[2][1];
+console.log(myData);

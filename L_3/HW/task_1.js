@@ -1,48 +1,40 @@
-/*
-    1. Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, sign — знак арифметической операции.
-       Функция должна расчитывать результат операции, исходя из переданного ей знака.
-       Функция должна проверять корректность введенных чисел и знака операции.
-       Все аргументы для функции принять от пользователя.
+/* 
+1. Сделать собственные примеры методов применяемых для массивов.
 */
 
-function add(a, b) {
-    return a + b;
-}
+var Array_1 = [1,2,3,4,5];
+var Array_2 = ['H2','H6','H9'];
 
-function sub(a, b) {
-    return a - b;
-}
+//Метод push() добавляет значение в конец массива.
 
-function mul(a, b) {
-    return a * b;
-}
+Array_1.push(357);
 
-function div(a, b) {
-    return a / b;
-}
+console.log(Array_1);
 
-var operand1 = +prompt("Введите первое число: ");
-var sign = prompt("Введите знак арифметической операции: + - * /");
-var operand2 = +prompt("Введите второе число: ");
-var result;
+//Метод pop() удаляет последний элемент из массива.
 
-switch (sign) {
-    case "+":
-        result = add(operand1, operand2);
-        break;
-    case "-":
-        result = sub(operand1, operand2);
-        break;
-    case "*":
-        result = mul(operand1, operand2);
-        break;
-    case "/":
-        result = div(operand1, operand2);
-        break;
-    default:
-        document.write("<p> Знак <b style='color:red'>" + sign + "</b> - не является знаком арифметической операции.</p>");
-}
+Array_1.pop();
 
-if (result != undefined) {
-    document.write("Результат операции: " + result);
-}
+console.log(Array_1);
+
+// Метод unshift() добавляет элемент в начало массива.
+
+Array_1.unshift(471);
+
+console.log(Array_1);
+
+//Метод shift() удаляет первый элемент из массива.
+
+Array_1.shift();
+
+console.log(Array_1);
+
+// Метод join() объединяет элементы массива в строку, через указанный в параметре разделитель.
+
+var line = Array_2.join(', ');
+
+console.log('Модельный ряд автомобилей HAVAL в Украине: ' + line);
+
+//Метод reverse() меняет порядок элементов массива на обратный.
+
+console.log(Array_1.reverse());

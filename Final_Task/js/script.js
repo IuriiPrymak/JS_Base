@@ -9,6 +9,7 @@ $('document').ready(function(){
     var $modal_5 = $('.modal-container-5');
     var $modal_6 = $('.modal-container-6');
 
+    // modal Consult Button
 
     $('.header__consult-btn').on('click', function() {
         $modal.fadeIn('slow');

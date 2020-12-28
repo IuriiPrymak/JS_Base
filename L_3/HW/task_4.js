@@ -1,32 +1,14 @@
 /* 
-    4. Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте цикл.
+4. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором - 
+количество игроков в команде / объем двигателя / количество жителей в городе.
+Объединить данные из двух массивов и вывести их в одну строку. 
 */
 
-
-// function fibonacci(num){
-//     var a = 1, b = 0, temp;
-
-//     while (num >= 0){
-//         temp = a;
-//         a = a + b;
-//         b = temp;
-//         num--;
-//     }
-
-//     return b;
-// }
-
-// console.log(fibonacci(7));
-
-
-function fibonacci(num) {
-  var a = 1, b = 1;
-  for (var i = 3; i <= num; i++) {
-    var c = a + b;
-    a = b;
-    b = c;
-  }
-  return b;
-}
-
-console.log(fibonacci(7));
+var Array_1 = ['Амстердам','Роттердам','Санкт-Петербург','Прага','Краков'];
+var Array_2 = [869709,631155,5398064,1301132,779115];
+var ResultArray = Array_1.concat(Array_2);
+console.log(Array_1);
+console.log(Array_2);
+console.log(ResultArray.join(','));
+var line = ResultArray.join(',');
+console.log(line.split(','));
